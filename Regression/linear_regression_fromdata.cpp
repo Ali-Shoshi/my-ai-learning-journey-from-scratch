@@ -1,5 +1,23 @@
 #include <iostream>
-#include <vector>
+
+/*
+ * Machine Learning Profile:
+ * ----------------------------------------------------------------------
+ * - Model: Simple Linear Regression (Single Variable Feature Mapping Model)
+ * - Optimizer: Stochastic Gradient Descent (SGD with Split Learning Rates)
+ * - Batch Method: Online Learning (Updates weights immediately after evaluating each sample)
+ * - Regularization: None (Unpenalized weights)
+ * - Loss Math: Mean Squared Error Loss (MSE): sum((prediction - target)^2) / N
+ * - Metric: Mean Squared Error (MSE) logged per epoch
+ * ----------------------------------------------------------------------
+ * This program implements a Simple Linear Regression model from scratch in C++ to predict 
+ * numeric targets using a single input feature. It trains on a static dataset of 30 paired 
+ * data points modeling a linear trend (y = wx + b). Starting with initial weights (w = -5, b = 100), 
+ * the network uses continuous linear activation to calculate predictions. Over 150 epochs, 
+ * the training loop applies gradient descent to calculate partial derivatives (derivativeW, derivativeB) 
+ * for each sample, immediately updating the weight parameter (w) and bias parameter (b) using differential 
+ * learning rates (0.00001 for w, 0.01 for b) to incrementally minimize squared error loss.
+ */
 
 class Model{
     public:
